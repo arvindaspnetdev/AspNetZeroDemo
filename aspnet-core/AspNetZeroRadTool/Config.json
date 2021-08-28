@@ -1,0 +1,32 @@
+﻿{
+  "CompanyName": "",
+  "ProjectName": "AspnetboilerplateDemo",
+  "ProjectType": "Angular",
+  "ProjectVersion": "v8.0.0",
+  "ApplicationAreaName": "App",
+  "LicenseCode": "[YOURLICENSECODE]",
+  "AngularSrcPath": "\\..\\..\\angular\\src\\",
+  "AngularMergedSrcPath": "\\..\\src\\AspnetboilerplateDemo.Web.Host\\src\\",
+  "CoreSrcPath": "\\..\\src\\",
+  "FormatGeneratedFiles": true,
+  "FileLocations": {
+    "DbContext": "AspnetboilerplateDemo.EntityFrameworkCore\\EntityFrameworkCore\\AspnetboilerplateDemoDbContext.cs",
+    "CustomDtoMapper": "AspnetboilerplateDemo.Application\\CustomDtoMapper.cs",
+    "AppAuthorizationProvider": "AspnetboilerplateDemo.Core\\Authorization\\AspnetboilerplateDemoAuthorizationProvider.cs",
+    "EntityHistoryHelper": "AspnetboilerplateDemo.Core\\EntityHistory\\EntityHistoryHelper.cs",
+    "AppPermissions": "AspnetboilerplateDemo.Core\\Authorization\\PermissionNames.cs",
+    "LocalizationFile": "AspnetboilerplateDemo.Core\\Localization\\AspnetboilerplateDemoLocalizationConfigurer\\AspnetboilerplateDemo.xml",
+    "EntityFrameWorkProjectFolder": "AspnetboilerplateDemo.EntityFrameworkCore",
+    "Mvc": {
+      "AppNavigationProvider": "AspnetboilerplateDemo.Web.Mvc\\Areas\\{{App_Area_Name_Here}}\\Startup\\{{App_Area_Name_Here}}NavigationProvider.cs",
+      "AppPageNames": "AspnetboilerplateDemo.Web.Mvc\\Areas\\Admin\\Startup\\{{App_Area_Name_Here}}PageNames.cs",
+      "BundleConfig": "AspnetboilerplateDemo.Web.Mvc\\bundles.json"
+    },
+    "Angular": {
+      "AppNavigationService": "app\\shared\\layout\\nav\\app-navigation.service.ts",
+      "ServiceProxies": "shared\\service-proxies\\service-proxy.module.ts",
+      "Module": "app\\app.module.ts",
+      "RoutingModule": "app\\app-routing.module.ts"
+    }
+  }
+}

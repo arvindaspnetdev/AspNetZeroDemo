@@ -1,0 +1,42 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #createCountryForm="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'Create Country' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div>
+      
+        <div class="form-group row required">
+          <label class="col-md-3 col-form-label" for="countryName">
+            {{ "Country Name" | localize }}
+          </label>
+          <div class="col-md-9">
+            <input
+              type="text"
+              class="form-control"
+              name="countryName"
+              id="countryName"
+              required 
+              [(ngModel)]="country.countryName"
+              #countryNameModel="ngModel"
+              #countryNameEl
+            />
+            <abp-validation-summary
+              [control]="countryNameModel"
+              [controlEl]="countryNameEl"
+            ></abp-validation-summary>
+          </div>
+        </div> 
+    </div>
+  </div>
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!createCountryForm.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>

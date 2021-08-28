@@ -1,0 +1,60 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #editStateForm="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'EditState' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">     
+    <div>     
+      <div class="form-group row required">
+        <label class="col-md-3 col-form-label" for="name">
+          {{ "Country" | localize }}
+        </label>
+        <div class="col-md-9">
+          <select id="countryId" class="form-control"
+          required 
+          name="countryId"
+          [(ngModel)]="state.countryId"  
+            #countryIdModel="ngModel"
+            #countryIdEl
+            ><option *ngFor="let item of comboboxItems">{{item?.displayText}}</option></select>
+           
+          <abp-validation-summary
+            [control]="countryIdModel"
+            [controlEl]="countryIdEl"
+          ></abp-validation-summary>
+        </div>
+      </div>
+      <div class="form-group row required">
+        <label class="col-md-3 col-form-label" for="displayName">
+          {{ "State" | localize }}
+        </label>
+        <div class="col-md-9">
+          <input
+            type="text"
+            class="form-control"
+            name="stateName"
+            id="stateName"
+            required 
+            [(ngModel)]="state.stateName"
+            #stateNameModel="ngModel"
+            #stateNameEl
+          />
+          <abp-validation-summary
+            [control]="stateNameModel"
+            [controlEl]="stateNameEl"
+          ></abp-validation-summary>
+        </div>
+      </div> 
+  </div>
+  </div>
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!editStateForm.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>
